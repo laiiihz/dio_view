@@ -30,7 +30,7 @@ class _RequestWrapperViewState extends State<RequestWrapperView> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(width: 8),
-            const Text('Dio Inspector 2'),
+            const Text('Dio View'),
             const Spacer(),
             IconButton(
               icon: const Icon(Icons.clear_all_rounded),

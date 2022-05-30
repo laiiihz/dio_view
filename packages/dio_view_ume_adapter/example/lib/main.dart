@@ -38,9 +38,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final _controller = TextEditingController();
   @override
   void initState() {
     super.initState();
+    _controller.text = 'https://reqres.in/api/users';
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -50,8 +58,21 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _controller,
+                ),
+              ),
+              IconButton(
+                  onPressed: () {
+                    _dio.get(_controller.text);
+                  },
+                  icon: const Icon(Icons.send)),
+            ],
+          ),
           ElevatedButton(
             onPressed: () {
               _dio.get('https://reqres.in/api/users?delay=6');
