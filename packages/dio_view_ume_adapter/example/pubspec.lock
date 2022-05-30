@@ -124,9 +124,11 @@ packages:
   flutter_ume:
     dependency: "direct main"
     description:
-      name: flutter_ume
-      url: "https://pub.flutter-io.cn"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "00be1ef87863cde651e02212a2f720bb2cbd7347"
+      url: "https://github.com/bytedance/flutter_ume"
+    source: git
     version: "0.3.0+1"
   flutter_web_plugins:
     dependency: transitive
@@ -160,7 +162,7 @@ packages:
       name: json_view
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.3.1"
+    version: "0.3.3"
   lints:
     dependency: transitive
     description:

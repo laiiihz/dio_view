@@ -37,7 +37,9 @@ dependencies:
   dio: ^4.0.6
   dio_view_ume_adapter:
     path: ..
-  flutter_ume: ^0.3.0+1
+  flutter_ume: 
+    git:
+      url: https://github.com/bytedance/flutter_ume
 
 dev_dependencies:
   flutter_test:
