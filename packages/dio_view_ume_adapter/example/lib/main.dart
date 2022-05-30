@@ -8,7 +8,7 @@ import 'package:dio_view_ume_adapter/dio_view_ume_adapter.dart';
 final _dio = Dio();
 void main() {
   if (kDebugMode) {
-    PluginManager.instance.register(DioInspector2(dio: _dio));
+    PluginManager.instance.register(DioViewUMEAdapter(dio: _dio));
     runApp(const UMEWidget(child: MyApp()));
   } else {
     runApp(const MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Dio View UME Adapter',
       darkTheme: ThemeData.dark(),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Dio View UME Adapter'),
     );
   }
 }
