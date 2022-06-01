@@ -67,10 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               IconButton(
-                  onPressed: () {
-                    _dio.get(_controller.text);
-                  },
-                  icon: const Icon(Icons.send)),
+                onPressed: () {
+                  _dio.get(_controller.text);
+                },
+                icon: const Icon(Icons.send),
+              ),
             ],
           ),
           ElevatedButton(
